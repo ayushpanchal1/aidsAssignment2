@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Delay Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Logistics Delay Predictor</h1>
+        <form method="POST">
+            <label for="shipping_time">Shipping Time (hours):</label>
+            <input type="number" name="shipping_time" step="0.1" required><br>
+
+            <label for="distance">Distance (km):</label>
+            <input type="number" name="distance" step="0.1" required><br>
+
+            <label for="weather">Weather:</label>
+            <select name="weather" required>
+                <option value="0">Clear</option>
+                <option value="1">Rain</option>
+                <option value="2">Snow</option>
+            </select><br>
+
+            <label for="traffic_conditions">Traffic Conditions:</label>
+            <select name="traffic_conditions" required>
+                <option value="0">Low</option>
+                <option value="1">Medium</option>
+                <option value="2">High</option>
+            </select><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

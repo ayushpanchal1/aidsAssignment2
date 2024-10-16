@@ -1,0 +1,6 @@
+shipping_time,distance,weather,traffic_conditions,delay
+10,200,clear,low,0
+12,300,rain,medium,1
+15,150,clear,high,1
+20,500,snow,high,1
+9,100,clear,low,0
